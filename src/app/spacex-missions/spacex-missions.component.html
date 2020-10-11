@@ -1,0 +1,53 @@
+<div class="container grey-background">
+    <h1>SpaceX Launch Programs</h1>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 padding-5">
+            <div class="col-md-12 white-background padding-5">
+                <label class="txt-bold">Filters</label>
+                <div class="col-md-12 padding-lft-rgt-20 text-center">
+                    <label class="col-md-12 border-bottom">Launch Year</label>
+                </div>
+                <div class="row margin-0">
+                    <div class="col-sm-6 col-md-6 text-center" *ngFor="let year of launchYearArr">
+                        <input type="radio" [id]="year" name="launch_year" [value]="year" (change)="onYearChange($event.target.value)" />
+                        <label [for]="year" class="radioLbl">{{year}}</label>
+                    </div>
+                </div>
+
+                <div class="col-md-12 padding-lft-rgt-20 text-center">
+                    <label class="col-md-12 border-bottom">Successful Launch</label>
+                </div>
+                <div class="row margin-0">
+                    <div class="col-sm-6 col-md-6 text-center">
+                        <input type="radio" id="launchT" name="launch_success" value=true (change)="onLaunchChange($event.target.value)" />
+                        <label for="launchT" class="radioLbl">True</label>
+                    </div>
+                    <div class="col-sm-6 col-md-6 text-center">
+                        <input type="radio" id="launchF" name="launch_success" value=false (change)="onLaunchChange($event.target.value)" />
+                        <label for="launchF" class="radioLbl">False</label>
+                    </div>
+                </div>
+
+                <div class="col-md-12 padding-lft-rgt-20 text-center">
+                    <label class="col-md-12 border-bottom">Successful Landing</label>
+                </div>
+                <div class="row margin-0">
+                    <div class="col-sm-6 col-md-6 text-center">
+                        <input type="radio" id="landingT" name="landing_success" value=true (change)="onLandChange($event.target.value)" />
+                        <label for="landingT" class="radioLbl">True</label>
+                    </div>
+                    <div class="col-sm-6 col-md-6 text-center">
+                        <input type="radio" id="landingF" name="landing_success" value=false (change)="onLandChange($event.target.value)" />
+                        <label for="landingF" class="radioLbl">False</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9">
+            <div class="row padding-5">
+                <app-mission-detail class="col-xs-12 col-sm-6 col-md-3 padding-5 align-items-start" *ngFor="let eachMision of missionDetails" [mission]="eachMision"></app-mission-detail>
+            </div>
+        </div>
+    </div>
+</div>

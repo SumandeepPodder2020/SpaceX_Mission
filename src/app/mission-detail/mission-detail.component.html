@@ -1,0 +1,26 @@
+<div class="white-background padding-15 border-radius-10">
+    <div class="col-12 grey-background">
+        <img [src]="mission.links.mission_patch_small" class="col-12 mx-auto d-block" alt="Mission_Image">
+    </div>
+    <div class="col-12 padding-0">
+        <label class="txt-blue padding-0 txt-bold">{{mission.mission_name}}<span class="padding-left-5">&nbsp;#</span>{{mission.flight_number}}</label>
+    </div>
+    <div class="col-12 row align-items-start">
+        <label class="txt-bold col-12 padding-0">Mission Ids</label>
+        <ul *ngIf="mission.mission_id.length>0" class="col-12 padding-0">
+            <li class="txt-blue" class="margin-left-40 " *ngFor="let id of mission.mission_id">{{id}}</li>
+        </ul>
+    </div>
+    <div class="col-12 row align-items-start">
+        <label class="col-8 txt-bold padding-0">Launch Year</label>
+        <label class="col-4 txt-blue padding-0">{{mission.launch_year}}</label>
+    </div>
+    <div class="col-12 row align-items-start">
+        <label class="col-8 txt-bold padding-0">Successful Launch</label>
+        <label class="col-4 txt-blue padding-0">{{mission.launch_success}}</label>
+    </div>
+    <div class="col-12 row align-items-start">
+        <label class="col-8 txt-bold padding-0">Successful Landing</label>
+        <label class="col-4 txt-blue padding-0">{{mission.rocket.first_stage.cores[0].land_success}}</label>
+    </div>
+</div>

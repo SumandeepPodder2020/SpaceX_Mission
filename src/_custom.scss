@@ -1,0 +1,11 @@
+$grid-breakpoints: ( // Extra small screen / phone
+xs: 0, // Small screen / phone
+sm: 700px, // Medium screen / tablet
+md: 1024px, // Large screen / desktop
+lg: 1440px, // Extra large screen / wide desktop
+xl: 1500px) !default;
+$container-max-widths: ( sm: 1023px, md: 1440px, lg: 1440px)!default;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
