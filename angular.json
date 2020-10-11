@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "spacex-mission-project"
+  "defaultProject": "spacex-mission-project",
+  "cli": {
+    "analytics": false
+  }
 }
